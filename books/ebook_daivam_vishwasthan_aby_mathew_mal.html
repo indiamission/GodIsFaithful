@@ -38,6 +38,9 @@
     <!--CSS FontAwesome Self-hosted-->
     <!--<link href="../assets/fa/css/all.css"  rel="stylesheet" />-->
 
+    <!--Disable Context Menu (Rt Click)-->
+    <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
+    
 	<style>	
 	/* MALAYALAM MANJARI FONTS*/
 	@import url('https://smc.org.in/fonts/manjari.css');
@@ -374,6 +377,11 @@
 	  margin-bottom: 0.6rem;
 	  line-height: var(--paraline-height);
 	  text-indent: var(--paratext-indent);
+	  /*disable text selection*/
+	  -webkit-user-select: none;  
+  	-moz-user-select: none;    
+  	-ms-user-select: none;      
+  	user-select: none;
 	  /*text-align: justify;*/
 	}
 	.kicker {
@@ -966,9 +974,7 @@
 
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="loFSbbg2"></script>-->
+    
     <header>
     <!--HAMBURGER MENU FOR DEVICES-->
       <input type="checkbox" id="hamburger-input" class="burger-shower" />
